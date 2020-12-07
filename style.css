@@ -1,0 +1,55 @@
+/* задание 1 */
+
+ @media print {
+  h1 { font-size: 10pt; }
+ }
+
+@media screen, print {
+  h2 { font-size: 1.2; }
+}
+
+@media screen, print {
+  h3 { line-height: 13px; }
+}
+
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 480px)
+  and (resolution: 150dpi) {
+    h4 { line-height: 1.4; }
+}
+
+/* задание 2 */
+
+body {
+  font-family: @arial;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background: #008aff;
+}
+.nav a {
+  color: #fff;
+  padding: 15px 10px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav a: hover {
+  background: #5c8db7;
+}
+
+@media all and (max-width: 800px) {
+  .nav {
+    justify-content: space-around;
+  }
+  .nav a {
+    flex-grow: 1;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .nav {
+    flex-direction: column;
+  }
+}
